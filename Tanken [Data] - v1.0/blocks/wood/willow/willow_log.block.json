@@ -1,79 +1,148 @@
 {
-	"format_version": "1.17.41",
-	"minecraft:block": {
-		"description": {
-			"identifier": "yanasakana:willow_log",
-			"properties": {
-				"yanasakana:rotation": [
-					0,
-					1,
-					2
-				]
-			}
-		},
-		"components": {
-			"tag:wood": {},
-			"tag:log": {},
-			"minecraft:destroy_time": 4,
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "willow_log",
-					"render_method": "opaque"
-				},
-				"open": {
-					"texture": "willow_log_top",
-					"render_method": "opaque"
-				},
-				"up": "open",
-				"down": "open"
-			},
-			"minecraft:on_player_placing": {
-				"event": "updateRotation"
-			},
-			"minecraft:flammable": {
-				"burn_odds": 10,
-				"flame_odds": 25
-			},
-			"minecraft:unit_cube": {}
-		},
-		"permutations": [
-			{
-				"condition": "q.block_property('yanasakana:rotation') == 0",
-				"components": {
-					"minecraft:rotation": [
-						0,
-						0,
-						0
-					]
-				}
-			},
-			{
-				"condition": "q.block_property('yanasakana:rotation') == 1",
-				"components": {
-					"minecraft:rotation": [
-						90,
-						0,
-						0
-					]
-				}
-			},
-			{
-				"condition": "q.block_property('yanasakana:rotation') == 2",
-				"components": {
-					"minecraft:rotation": [
-						0,
-						0,
-						90
-					]
-				}
-			}
-		],
-		"events": {
-			"updateRotation": {
-				"set_block_property": {
-					"yanasakana:rotation": "math.floor( q.block_face / 2.0 )"
-				}
-			}
-		}
-	}
+    "format_version": "1.17.41",
+    "minecraft:block": {
+        "description": {
+            "identifier": "yanasakana:willow_log",
+            "properties": {
+                "yanasakana:facing_direction": [
+                    0,
+                    1,
+                    2
+                ]
+            }
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/blocks/willow_log.json",
+            "minecraft:destroy_time": 1.0,
+            "minecraft:unit_cube": {},
+            "minecraft:ticking": {
+                "looping": true,
+                "range": [
+                    6.0,
+                    8.0
+                ],
+                "on_tick": {
+                    "event": "yanasakana:updateLeaves"
+                }
+            },
+            "minecraft:on_player_placing": {
+                "event": "yanasakana:updateProperty"
+            },
+            "minecraft:creative_category": {
+                "category": "nature",
+                "group": "itemGroup.name.log"
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "willow_log",
+                    "render_method": "opaque"
+                },
+                "open": {
+                    "texture": "willow_log_top",
+                    "render_method": "opaque"
+                },
+                "up": "open",
+                "down": "open"
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_property( 'yanasakana:facing_direction' ) == 0",
+                "components": {
+                    "minecraft:rotation": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "minecraft:on_interact": {
+                        "condition": "query.equipped_item_any_tag( 'slot.weapon.mainhand', 'minecraft:is_axe' )",
+                        "event": "yanasakana:eventStrip0"
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property( 'yanasakana:facing_direction' ) == 1",
+                "components": {
+                    "minecraft:rotation": [
+                        90,
+                        0,
+                        0
+                    ],
+                    "minecraft:on_interact": {
+                        "condition": "query.equipped_item_any_tag( 'slot.weapon.mainhand', 'minecraft:is_axe' )",
+                        "event": "yanasakana:eventStrip1"
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property( 'yanasakana:facing_direction' ) == 2",
+                "components": {
+                    "minecraft:rotation": [
+                        0,
+                        0,
+                        90
+                    ],
+                    "minecraft:on_interact": {
+                        "condition": "query.equipped_item_any_tag( 'slot.weapon.mainhand', 'minecraft:is_axe' )",
+                        "event": "yanasakana:eventStrip2"
+                    }
+                }
+            }
+        ],
+        "events": {
+            "yanasakana:updateLeaves": {
+                "run_command": {
+                    "command": [
+                        "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 yanasakana:willow_leaves_dummy 0 replace yanasakana:willow_leaves",
+                        "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 yanasakana:willow_leaves 0 replace yanasakana:willow_leaves_dummy"
+                    ]
+                }
+            },
+            "yanasakana:updateProperty": {
+                "set_block_property": {
+                    "yanasakana:facing_direction": "math.floor( query.block_face / 2.0 )"
+                }
+            },
+            "yanasakana:eventStrip0": {
+                "run_command": {
+                    "command": [
+                        "setblock ~ ~ ~ yanasakana:stripped_willow_log",
+                        "playsound hit.wood @a ~ ~ ~"
+                    ]
+                },
+                "trigger": {
+                    "event": "yanasakana:eventDamageItem"
+                }
+            },
+            "yanasakana:eventStrip1": {
+                "run_command": {
+                    "command": [
+                        "structure load stripped_willow_log1 ~ ~ ~",
+                        "playsound hit.wood @a ~ ~ ~"
+                    ]
+                },
+                "trigger": {
+                    "event": "yanasakana:eventDamageItem"
+                }
+            },
+            "yanasakana:eventStrip2": {
+                "run_command": {
+                    "command": [
+                        "structure load stripped_willow_log2 ~ ~ ~",
+                        "playsound hit.wood @a ~ ~ ~"
+                    ]
+                },
+                "trigger": {
+                    "event": "yanasakana:eventDamageItem"
+                }
+            },
+            "yanasakana:eventDamageItem": {
+                "damage": {
+                    "type": "durability",
+                    "amount": 1,
+                    "target": "item"
+                }
+            }
+        }
+    }
 }

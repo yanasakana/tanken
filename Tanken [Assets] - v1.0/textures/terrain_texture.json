@@ -50,6 +50,16 @@
         },
         "willow_leaves": {
             "textures": "textures/blocks/willow_leaves"
+        },
+        // PLANKS
+        "hinoki_planks": {
+            "textures": "textures/blocks/hinoki_planks"
+        },
+        "sugi_planks": {
+            "textures": "textures/blocks/sugi_planks"
+        },
+        "willow_planks": {
+            "textures": "textures/blocks/willow_planks"
         }
     },
     "texture_name": "atlas.terrain"

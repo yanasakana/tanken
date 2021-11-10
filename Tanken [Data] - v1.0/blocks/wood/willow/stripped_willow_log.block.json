@@ -1,0 +1,46 @@
+{
+    "format_version": "1.17.41",
+    "minecraft:block": {
+        "description": {
+            "identifier": "yanasakana:stripped_willow_log",
+            "properties": {
+                "yanasakana:facing_direction": [
+                    0,
+                    1,
+                    2
+                ]
+            }
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/blocks/stripped_willow_log.json",
+            "minecraft:destroy_time": 1.0,
+            "minecraft:unit_cube": {},
+            "minecraft:on_player_placing": {
+                "event": "yanasakana:updateProperty"
+            },
+            "minecraft:creative_category": {
+                "category": "nature",
+                "group": "itemGroup.name.log"
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "stripped_willow_log",
+                    "render_method": "opaque"
+                },
+                "open": {
+                    "texture": "stripped_willow_log_top",
+                    "render_method": "opaque"
+                },
+                "up": "open",
+                "down": "open"
+            }
+        },
+        "events": {
+            "yanasakana:updateProperty": {
+                "set_block_property": {
+                    "yanasakana:facing_direction": "math.floor( query.block_face / 2.0 )"
+                }
+            }
+        }
+    }
+}
