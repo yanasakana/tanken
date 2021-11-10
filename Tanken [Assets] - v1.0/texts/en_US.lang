@@ -3,9 +3,8 @@
 ##やなぎ#2957
 
 ## Packs
-pack.description=Explore! A vast new world with biomes and structures! §d@yanasakanadev
-pack.name=§d§oTanken
-
+pack.description=Adds new biomes and various exciting exploration elements. Explore a vast new world! §d@yanasakanadev | やなぎ#2957
+pack.name=§d§oTanken!
 
 ## Tiles
 tile.yanasakana:hinoki_button.name=Hinoki Button
@@ -58,7 +57,17 @@ tile.yanasakana:stripped_willow_wood.name=Stripped Willow Wood
 
 
 ## Items
+item.yanasakana:hinoki_boat=Hinoki Boat
+item.yanasakana:hinoki_door=Hinoki Door
+item.yanasakana:hinoki_sign=Hinoki Sign
 
+item.yanasakana:sugi_boat=Sugi Boat
+item.yanasakana:sugi_door=Sugi Door
+item.yanasakana:sugi_sign=Sugi Sign
+
+item.yanasakana:willow_boat=Willow Boat
+item.yanasakana:willow_door=Willow Door
+item.yanasakana:willow_sign=Willow Sign
 
 
 

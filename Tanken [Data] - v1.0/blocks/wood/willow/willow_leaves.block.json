@@ -13,7 +13,6 @@
         "components": {
             "minecraft:destroy_time": 0.35,
             "minecraft:breakonpush": true,
-            "minecraft:unit_cube": {},
             "minecraft:loot": "loot_tables/empty.loot_table.json",
             "minecraft:creative_category": {
                 "category": "nature",
@@ -22,12 +21,12 @@
             "minecraft:material_instances": {
                 "*": {
                     "texture": "willow_leaves",
-                    "render_method": "blend",
-                    "ambient_occlusion": true
+                    "render_method": "alpha_test",
+                    "ambient_occlusion": false
                 }
             },
             "minecraft:block_light_emission": 0.0,
-            "minecraft:block_light_absorption": 7,
+            "minecraft:block_light_absorption": 0,
             "minecraft:flammable": {
                 "burn_odds": 50,
                 "flame_odds": 50

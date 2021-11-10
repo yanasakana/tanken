@@ -1,0 +1,19 @@
+{
+    "format_version": "1.17.41",
+    "minecraft:item": {
+        "description": {
+            "identifier": "yanasakana:willow_door",
+            "category": "Construction"
+        },
+        "components": {
+            "tag:door": {},
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.door"
+            },
+            "minecraft:icon": {
+                "texture": "woodItem.Door",
+                "frame": 3
+            }
+        }
+    }
+}

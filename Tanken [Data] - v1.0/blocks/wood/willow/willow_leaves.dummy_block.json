@@ -29,7 +29,6 @@
 					"event": "yanasakana:updateTile"
 				}
 			},
-			"minecraft:unit_cube": {},
 			"minecraft:loot": "loot_tables/blocks/willow_leaves_loot.loot_table.json"
 		},
 		"events": {

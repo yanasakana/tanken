@@ -1,0 +1,24 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "yanasakana:willow_pressure_plate"
+    },
+    "tags": [ 
+      "crafting_table" 
+    ],
+    "group": "wooden_pressure_plate",
+    "pattern": [
+      "##"
+    ],
+    "key": {
+      "#": {
+        "item": "yanasakana:willow_planks"
+      }
+    },
+    "result": {
+      "item": "yanasakana:willow_pressure_plate",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "yanasakana:willow_slab"
+    },
+    "tags": [ 
+      "crafting_table" 
+    ],
+    "group": "wooden_slab",
+    "pattern": [
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "yanasakana:willow_planks"
+      }
+    },
+    "result": {
+      "item": "yanasakana:willow_slab",
+      "count": 6
+    }
+  }
+}

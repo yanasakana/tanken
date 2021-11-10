@@ -1,0 +1,17 @@
+// {
+//     "format_version": "1.8.0",
+//     "minecraft:client_entity": {
+//         "description": {
+//             "identifier": "yanasakana:willow_boat",
+//             "textures": {
+//                 "default": "textures/entity/boat/willow_boat"
+//             },
+//             "geometry": {
+//                 "default": "geometry.boat"
+//             },
+//             "render_controllers": [
+//                 "controller.render.default"
+//             ]
+//         }
+//     }
+// }
