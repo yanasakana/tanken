@@ -1,0 +1,56 @@
+{
+    "num_mip_levels": 4,
+    "padding": 8,
+    "resource_pack_name": "vanilla",
+    "texture_data": {
+        // LOGS
+        "hinoki_log": {
+            "textures": "textures/blocks/hinoki_log"
+        },
+        "sugi_log": {
+            "textures": "textures/blocks/sugi_log"
+        },
+        "willow_log": {
+            "textures": "textures/blocks/willow_log"
+        },
+        "hinoki_log_top": {
+            "textures": "textures/blocks/hinoki_log_top"
+        },
+        "sugi_log_top": {
+            "textures": "textures/blocks/sugi_log_top"
+        },
+        "willow_log_top": {
+            "textures": "textures/blocks/willow_log_top"
+        },
+        // STRIPPED LOGS
+        "stripped_hinoki_log": {
+            "textures": "textures/blocks/stripped_hinoki_log"
+        },
+        "stripped_sugi_log": {
+            "textures": "textures/blocks/stripped_sugi_log"
+        },
+        "stripped_willow_log": {
+            "textures": "textures/blocks/stripped_willow_log"
+        },
+        "stripped_hinoki_log_top": {
+            "textures": "textures/blocks/stripped_hinoki_log_top"
+        },
+        "stripped_sugi_log_top": {
+            "textures": "textures/blocks/stripped_sugi_log_top"
+        },
+        "stripped_willow_log_top": {
+            "textures": "textures/blocks/stripped_willow_log_top"
+        },
+        // LEAVES
+        "hinoki_leaves": {
+            "textures": "textures/blocks/hinoki_leaves"
+        },
+        "sugi_leaves": {
+            "textures": "textures/blocks/sugi_leaves"
+        },
+        "willow_leaves": {
+            "textures": "textures/blocks/willow_leaves"
+        }
+    },
+    "texture_name": "atlas.terrain"
+}

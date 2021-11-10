@@ -1,0 +1,45 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Tanken",
+		"description": "Adds new biomes and exploration elements. @yanasakanadev | やなぎ#2957",
+		"uuid": "d03573e5-322c-4bf7-90ca-3bfe3986b2b8",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			17,
+			41
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "fd049810-8e36-43f7-afe5-89f44be24c78",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"authors": [
+			"yanasakana"
+		],
+		"license": "MIT"
+	},
+	"dependencies": [
+		{
+			"uuid": "2bc87e5a-da56-4466-baa9-3be99ec1e6c9",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

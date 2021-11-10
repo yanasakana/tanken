@@ -3,7 +3,7 @@
 Tanken is a Minecraft: Bedrock Edition Add-on that adds new biomes and exploration elements.
 
 ## Project Authors
-- Yanasakana - `やなぎ#2957`
+- yanasakana - `やなぎ#2957`
 
 
 ### Additonal Information

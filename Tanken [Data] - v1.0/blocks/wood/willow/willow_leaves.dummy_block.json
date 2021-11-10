@@ -1,0 +1,45 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "yanasakana:willow_leaves_dummy"
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:breakonpush": true,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "willow_leaves",
+					"render_method": "blend",
+					"ambient_occlusion": true
+				}
+			},
+			"minecraft:block_light_emission": 0.0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:flammable": {
+				"burn_odds": 50,
+				"flame_odds": 50
+			},
+			"minecraft:ticking": {
+				"range": [
+					0.1,
+					0.1
+				],
+				"on_tick": {
+					"event": "yanasakana:updateTile"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:loot": "loot_tables/blocks/willow_leaves_loot.json"
+		},
+		"events": {
+			"yanasakana:updateTile": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ yanasakana:willow_leaves"
+					]
+				}
+			}
+		}
+	}
+}

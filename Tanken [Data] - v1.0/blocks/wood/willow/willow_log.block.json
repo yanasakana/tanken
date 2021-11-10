@@ -1,0 +1,79 @@
+{
+	"format_version": "1.17.41",
+	"minecraft:block": {
+		"description": {
+			"identifier": "yanasakana:willow_log",
+			"properties": {
+				"yanasakana:rotation": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"components": {
+			"tag:wood": {},
+			"tag:log": {},
+			"minecraft:destroy_time": 4,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "willow_log",
+					"render_method": "opaque"
+				},
+				"open": {
+					"texture": "willow_log_top",
+					"render_method": "opaque"
+				},
+				"up": "open",
+				"down": "open"
+			},
+			"minecraft:on_player_placing": {
+				"event": "updateRotation"
+			},
+			"minecraft:flammable": {
+				"burn_odds": 10,
+				"flame_odds": 25
+			},
+			"minecraft:unit_cube": {}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_property('yanasakana:rotation') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('yanasakana:rotation') == 1",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('yanasakana:rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						90
+					]
+				}
+			}
+		],
+		"events": {
+			"updateRotation": {
+				"set_block_property": {
+					"yanasakana:rotation": "math.floor( q.block_face / 2.0 )"
+				}
+			}
+		}
+	}
+}

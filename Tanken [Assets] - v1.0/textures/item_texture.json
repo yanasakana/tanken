@@ -1,0 +1,38 @@
+{
+    "resource_pack_name": "vanilla",
+    "texture_data": {
+        "woodItem.Sign": {
+            "textures": [
+                "textures/items/sign",
+                "textures/items/hinoki_sign",
+                "textures/items/sugi_sign",
+                "textures/items/willow_sign"
+            ]
+        },
+        "woodItem.Boat": {
+            "textures": [
+                "textures/items/boat",
+                "textures/items/hinoki_boat",
+                "textures/items/sugi_boat",
+                "textures/items/willow_boat"
+            ]
+        },
+        "woodItem.Door": {
+            "textures": [
+                "textures/items/door",
+                "textures/items/hinoki_door",
+                "textures/items/sugi_door",
+                "textures/items/willow_door"
+            ]
+        },
+        "woodItem.Sapling": {
+            "textures": [
+                "textures/items/sapling",
+                "textures/items/hinoki_sapling",
+                "textures/items/sugi_sapling",
+                "textures/items/willow_sapling"
+            ]
+        }
+    },
+    "texture_name": "atlas.items"
+}

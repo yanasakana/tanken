@@ -1,0 +1,53 @@
+{
+    "format_version": [
+        1,
+        0,
+        0
+    ],
+    // LOGS
+    "yanasakana:hinoki_log": {
+        "sound": "wood"
+    },
+    "yanasakana:sugi_log": {
+        "sound": "wood"
+    },
+    "yanasakana:willow_log": {
+        "sound": "wood"
+    },
+    // STRIPPED LOGS
+    "yanasakana:stripped_hinoki_log": {
+        "sound": "wood"
+    },
+    "yanasakana:stripped_sugi_log": {
+        "sound": "wood"
+    },
+    "yanasakana:stripped_willow_log": {
+        "sound": "wood"
+    },
+    // PLANKS
+    "yanasakana:hinoki_planks": {
+        "sound": "wood",
+        "textures": "hinoki_planks"
+    },
+    "yanasakana:sugi_planks": {
+        "sound": "wood",
+        "textures": "sugi_planks"
+    },
+    "yanasakana:willow_planks": {
+        "sound": "wood",
+        "textures": "willow_planks"
+    },
+    // LEAVES
+    "yanasakana:hinoki_leaves": {
+        "sound": "grass",
+        "textures": "hinoki_leaves"
+    },
+    "yanasakana:sugi_leaves": {
+        "sound": "grass",
+        "textures": "sugi_leaves"
+    },
+    "yanasakana:willow_leaves": {
+        "sound": "grass",
+        "textures": "willow_leaves"
+    }
+}

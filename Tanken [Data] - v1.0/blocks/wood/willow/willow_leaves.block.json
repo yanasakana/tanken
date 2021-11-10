@@ -1,0 +1,99 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "yanasakana:willow_leaves",
+            "properties": {
+                "yanasakana:decay": [
+                    true,
+                    false
+                ]
+            }
+        },
+        "components": {
+            "minecraft:destroy_time": 0.35,
+            "minecraft:breakonpush": true,
+            "minecraft:unit_cube": {},
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:creative_category": {
+                "category": "nature",
+                "group": "itemGroup.name.leaves"
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "willow_leaves",
+                    "render_method": "blend",
+                    "ambient_occlusion": true
+                }
+            },
+            "minecraft:block_light_emission": 0.0,
+            "minecraft:block_light_absorption": 7,
+            "minecraft:flammable": {
+                "burn_odds": 50,
+                "flame_odds": 50
+            },
+            "minecraft:on_player_placing": {
+                "event": "yanasakana:updatePropertyfalse"
+            },
+            "minecraft:on_player_destroyed": {
+                "event": "yanasakana:tileDestroyed"
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_property('yanasakana:decay') == true",
+                "components": {
+                    "minecraft:ticking": {
+                        "looping": true,
+                        "range": [
+                            15.0,
+                            20.0
+                        ],
+                        "on_tick": {
+                            "event": "yanasakana:decay"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('yanasakana:decay') == false",
+                "components": {}
+            }
+        ],
+        "events": {
+            "yanasakana:updatePropertyfalse": {
+                "set_block_property": {
+                    "yanasakana:decay": false
+                }
+            },
+            "yanasakana:updatePropertytrue": {
+                "set_block_property": {
+                    "yanasakana:decay": true
+                }
+            },
+            "yanasakana:tileDestroyed": {
+                "sequence": [
+                    {
+                        "condition": "query.get_equipped_item_name == 'shears'",
+                        "spawn_loot": {
+                            "table": "loot_tables/blocks/willow_leaves.json"
+                        }
+                    },
+                    {
+                        "condition": "query.get_equipped_item_name != 'shears'",
+                        "spawn_loot": {
+                            "table": "loot_tables/blocks/willow_leaves_loot.json"
+                        }
+                    }
+                ]
+            },
+            "yanasakana:decay": {
+                "run_command": {
+                    "command": [
+                        "setblock ~ ~ ~ air 0 destroy"
+                    ]
+                }
+            }
+        }
+    }
+}
