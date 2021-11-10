@@ -14,7 +14,7 @@
             "minecraft:destroy_time": 0.35,
             "minecraft:breakonpush": true,
             "minecraft:unit_cube": {},
-            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:loot": "loot_tables/empty.loot_table.json",
             "minecraft:creative_category": {
                 "category": "nature",
                 "group": "itemGroup.name.leaves"
@@ -76,13 +76,13 @@
                     {
                         "condition": "query.get_equipped_item_name == 'shears'",
                         "spawn_loot": {
-                            "table": "loot_tables/blocks/willow_leaves.json"
+                            "table": "loot_tables/blocks/willow_leaves.loot_table.json"
                         }
                     },
                     {
                         "condition": "query.get_equipped_item_name != 'shears'",
                         "spawn_loot": {
-                            "table": "loot_tables/blocks/willow_leaves_loot.json"
+                            "table": "loot_tables/blocks/willow_leaves_loot.loot_table.json"
                         }
                     }
                 ]

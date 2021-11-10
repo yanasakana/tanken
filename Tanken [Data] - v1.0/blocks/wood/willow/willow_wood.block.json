@@ -2,7 +2,7 @@
     "format_version": "1.17.41",
     "minecraft:block": {
         "description": {
-            "identifier": "yanasakana:willow_log",
+            "identifier": "yanasakana:willow_wood",
             "properties": {
                 "yanasakana:facing_direction": [
                     0,
@@ -12,25 +12,15 @@
             }
         },
         "components": {
-            "minecraft:loot": "loot_tables/blocks/willow_log.loot_table.json",
+            "minecraft:loot": "loot_tables/blocks/willow_wood.loot_table.json",
             "minecraft:destroy_time": 1.0,
             "minecraft:unit_cube": {},
-            "minecraft:ticking": {
-                "looping": true,
-                "range": [
-                    6.0,
-                    8.0
-                ],
-                "on_tick": {
-                    "event": "yanasakana:updateLeaves"
-                }
-            },
             "minecraft:on_player_placing": {
                 "event": "yanasakana:updateProperty"
             },
             "minecraft:creative_category": {
                 "category": "nature",
-                "group": "itemGroup.name.log"
+                "group": "itemGroup.name.wood"
             },
             "minecraft:on_interact": {
                 "condition": "query.equipped_item_any_tag( 'slot.weapon.mainhand', 'minecraft:is_axe' )",
@@ -42,7 +32,7 @@
                     "render_method": "opaque"
                 },
                 "open": {
-                    "texture": "willow_log_top",
+                    "texture": "willow_log",
                     "render_method": "opaque"
                 },
                 "up": "open",
@@ -82,14 +72,6 @@
             }
         ],
         "events": {
-            "yanasakana:updateLeaves": {
-                "run_command": {
-                    "command": [
-                        "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 yanasakana:willow_leaves_dummy 0 replace yanasakana:willow_leaves",
-                        "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 yanasakana:willow_leaves 0 replace yanasakana:willow_leaves_dummy"
-                    ]
-                }
-            },
             "yanasakana:updateProperty": {
                 "set_block_property": {
                     "yanasakana:facing_direction": "math.floor( query.block_face / 2.0 )"
@@ -101,7 +83,8 @@
                         "condition": "query.block_property( 'yanasakana:facing_direction' ) == 0",
                         "run_command": {
                             "command": [
-                                "setblock ~ ~ ~ yanasakana:stripped_willow_log"
+                                "setblock ~ ~ ~ yanasakana:stripped_willow_wood",
+                                "playsound hit.wood @a ~ ~ ~"
                             ]
                         }
                     },
@@ -109,7 +92,8 @@
                         "condition": "query.block_property( 'yanasakana:facing_direction' ) == 1",
                         "run_command": {
                             "command": [
-                                "structure load mystructure:stripped_willow_log1 ~ ~ ~"
+                                "structure load mystructure:stripped_willow_wood1 ~ ~ ~",
+                                "playsound hit.wood @a ~ ~ ~"
                             ]
                         }
                     },
@@ -117,7 +101,8 @@
                         "condition": "query.block_property( 'yanasakana:facing_direction' ) == 2",
                         "run_command": {
                             "command": [
-                                "structure load mystructure:stripped_willow_log2 ~ ~ ~"
+                                "structure load mystructure:stripped_willow_wood2 ~ ~ ~",
+                                "playsound hit.wood @a ~ ~ ~"
                             ]
                         }
                     }

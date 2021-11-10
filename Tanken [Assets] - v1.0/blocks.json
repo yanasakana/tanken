@@ -49,5 +49,25 @@
     "yanasakana:willow_leaves": {
         "sound": "grass",
         "textures": "willow_leaves"
+    },
+    // WOODS
+    "yanasakana:hinoki_wood": {
+        "sound": "wood"
+    },
+    "yanasakana:sugi_wood": {
+        "sound": "wood"
+    },
+    "yanasakana:willow_wood": {
+        "sound": "wood"
+    },
+    // STRIPPED WOODS
+    "yanasakana:stripped_hinoki_wood": {
+        "sound": "wood"
+    },
+    "yanasakana:stripped_sugi_wood": {
+        "sound": "wood"
+    },
+    "yanasakana:stripped_willow_wood": {
+        "sound": "wood"
     }
 }

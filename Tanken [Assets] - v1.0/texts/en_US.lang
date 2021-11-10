@@ -1,0 +1,69 @@
+##Code and Translations done by @yanasakanadev
+##2021/11/9
+##やなぎ#2957
+
+## Packs
+pack.description=Explore! A vast new world with biomes and structures! §d@yanasakanadev
+pack.name=§d§oTanken
+
+
+## Tiles
+tile.yanasakana:hinoki_button.name=Hinoki Button
+tile.yanasakana:hinoki_door.name=Hinoki Door
+tile.yanasakana:hinoki_fence.name=Hinoki Fence
+tile.yanasakana:hinoki_fencegate.name=Hinoki Fence Gate
+tile.yanasakana:hinoki_leaves.name=Hinoki Leaves
+tile.yanasakana:hinoki_log.name=Hinoki Log
+tile.yanasakana:hinoki_pressure_plate.name=Hinoki Pressure Plate
+tile.yanasakana:hinoki_sign.name=Hinoki Sign
+tile.yanasakana:hinoki_trapdoor.name=Hinoki Trapdoor
+tile.yanasakana:hinoki_wood.name=Hinoki Wood
+tile.yanasakana:hinoki_planks.name=Hinoki Wood Planks
+tile.yanasakana:hinoki_slab.name=Hinoki Wood Slab
+tile.yanasakana:stripped_hinoki_log.name=Stripped Hinoki Log
+tile.yanasakana:stripped_hinoki_wood.name=Stripped Hinoki Wood
+
+tile.yanasakana:sugi_button.name=Sugi Button
+tile.yanasakana:sugi_door.name=Sugi Door
+tile.yanasakana:sugi_fence.name=Sugi Fence
+tile.yanasakana:sugi_fencegate.name=Sugi Fence Gate
+tile.yanasakana:sugi_leaves.name=Sugi Leaves
+tile.yanasakana:sugi_log.name=Sugi Log
+tile.yanasakana:sugi_pressure_plate.name=Sugi Pressure Plate
+tile.yanasakana:sugi_sign.name=Sugi Sign
+tile.yanasakana:sugi_trapdoor.name=Sugi Trapdoor
+tile.yanasakana:sugi_wood.name=Sugi Wood
+tile.yanasakana:sugi_planks.name=Sugi Wood Planks
+tile.yanasakana:sugi_slab.name=Sugi Wood Slab
+tile.yanasakana:stripped_sugi_log.name=Stripped Sugi Log
+tile.yanasakana:stripped_sugi_wood.name=Stripped Sugi Wood
+
+tile.yanasakana:willow_button.name=Willow Button
+tile.yanasakana:willow_door.name=Willow Door
+tile.yanasakana:willow_fence.name=Willow Fence
+tile.yanasakana:willow_fencegate.name=Willow Fence Gate
+tile.yanasakana:willow_leaves.name=Willow Leaves
+tile.yanasakana:willow_log.name=Willow Log
+tile.yanasakana:willow_pressure_plate.name=Willow Pressure Plate
+tile.yanasakana:willow_sign.name=Willow Sign
+tile.yanasakana:willow_trapdoor.name=Willow Trapdoor
+tile.yanasakana:willow_wood.name=Willow Wood
+tile.yanasakana:willow_planks.name=Willow Wood Planks
+tile.yanasakana:willow_slab.name=Willow Wood Slab
+tile.yanasakana:stripped_willow_log.name=Stripped Willow Log
+tile.yanasakana:stripped_willow_wood.name=Stripped Willow Wood
+
+
+
+
+
+## Items
+
+
+
+
+
+## Quick Templates
+
+### Entity
+####entity.yanasakana:ENTITY.name=ENTITY
